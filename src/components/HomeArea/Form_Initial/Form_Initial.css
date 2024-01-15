@@ -26,3 +26,15 @@ width: 400px;
 height: 300px;
 background-color: aqua;
 }
+
+.Form_Initial .loading{
+    animation: blink 1s infinite;
+    color: blue;
+}
+
+@keyframes blink{
+    0%{opacity: 100%}
+    50%{opacity: 0%}
+    100%{opacity: 100%}
+}
+
