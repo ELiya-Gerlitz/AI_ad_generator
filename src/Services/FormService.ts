@@ -1,8 +1,7 @@
-import axios from "axios";
-import FormModel from "../Models/FormModel";
 import appConfig from "../Utils/AppConfig";
+const apiKey = process.env.REACT_APP_API_KEY;
 
-async function processMessageToChatGPT(promptTogenerateTextualAd:any) :Promise<any>{
+async function generateTextualAd(promptTogenerateTextualAd:any) :Promise<any>{
     // const apiMessages = chatMessages.map((messageObject) => {
     //   const role = messageObject.sender === "ChatGPT" ? "assistant" : "user";
     //   return { role, content: messageObject.message };
@@ -21,7 +20,6 @@ async function processMessageToChatGPT(promptTogenerateTextualAd:any) :Promise<a
     // console.log(apiRequestBody)
 
   try{
-    const apiKey = process.env.REACT_APP_API_KEY;
     const response = await fetch( appConfig.gpt_3_5_turboEndpointURL, {
       method: "POST",
       headers: {
@@ -36,12 +34,10 @@ async function processMessageToChatGPT(promptTogenerateTextualAd:any) :Promise<a
   }catch(err: any){
     console.log(err)
   }
-
+  
   }
 
 
-
 export default {
-    // generateTextualAd
-    processMessageToChatGPT
+    generateTextualAd
 }

@@ -4,6 +4,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Layout from './components/LayoutArea/Layout/Layout';
 import { BrowserRouter } from 'react-router-dom';
+// require('dotenv').config();
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

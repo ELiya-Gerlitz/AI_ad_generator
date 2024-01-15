@@ -8,8 +8,6 @@ function Routing(): JSX.Element {
             <Routes>
                 <Route path="/" element={<Form_Initial/>}/>
             </Routes>
-            
-			I am routing!
         </div>
     );
 }
